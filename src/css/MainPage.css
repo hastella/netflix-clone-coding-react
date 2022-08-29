@@ -1,0 +1,178 @@
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* 시작 */
+
+.body {
+  background: rgb(20, 20, 20);
+  color: white;
+  font-family: "Poppins", sans-serif;
+  display: block;
+}
+
+.navbar{
+  margin-top: 0;
+  background: transparent;
+}
+
+.nav {
+    background: transparent;
+    display: block;
+    /* border: 3px solid yellow; */
+    display: flex;
+    color: white;
+    background-image: 
+    linear-gradient(
+        180deg,
+        rgba(0,0,0,.7) 10%,transparent);
+  }
+  
+  /* .nav-link .active {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    cursor: default;
+  } */
+  
+  .nav-link {
+    color: white;
+    font-weight: lighter;
+  }
+  
+  .nav-colored {
+    background: rgb(20, 20, 20);
+    /* border: 3px solid red; */
+    display: flex;
+    color: white;
+  }
+  
+  .container-fluid {
+    /* border: 3px solid red; */
+    padding: 0 3rem 0 3rem;
+  }
+  
+  .container-fluid img {
+    width: 5.5rem;
+    height: 100%;
+    /* border: 3px solid green; */
+    padding: 0.6rem 0 0.2rem 0;
+    margin-right: 1.5rem;
+  }
+  
+  .nav-item-kids, .nav-item-notification, .nav-item-profile {
+    padding-left: 0.8rem;
+    cursor: pointer;
+  }
+  
+  .searchBar {
+    display: flex;
+    padding-right: 2.5rem;
+  }
+  
+  .searchBtn {
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-left: 0.5rem;
+  }
+  
+  .searchInput {
+    width: 250px;
+    height: 34px;
+    background-color: rgba(0, 0, 0, 0.63);
+    border: 1px solid white;
+    padding-left: 38px;
+    font-size: 16px;
+    z-index: 2;
+  }
+  
+  #search {
+    display: none;
+  }
+  
+  .nav-item-notification .btn-secondary {
+    --bs-btn-bg: none;
+    --bs-btn-border-color: none;
+  }
+  
+  .nav-item-notification .btn-secondary:hover {
+    --bs-btn-hover-bg: none;
+  }
+  
+  .nav-item-kids a {
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: white;
+  }
+  
+  .nav-item-profile li {
+    list-style: none;
+  }
+  
+  .nav-item-profile img {
+    border-radius: 5px;
+  }
+  
+  .dropdown-toggle {
+    color: white;
+  }
+  
+  /* .caret.caret-up {
+    border-top-width: 0;
+    border-bottom: 4px solid #fff;
+  } */
+  
+  .dropdown .dropdown-menu {
+    background-color: rgb(42, 45, 54);
+    color: white;
+    font-size: small;
+    margin-left: -80px;
+    margin-top: 10%;
+    border: 1px solid white;
+  }
+  
+  .dropdown-menu a {
+    color: white;
+  }

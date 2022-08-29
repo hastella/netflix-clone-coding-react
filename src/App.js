@@ -1,25 +1,28 @@
-import logo from './logo.svg';
+import React from "react"
+import { useEffect } from 'react'
+import { Routes, Route } from "react-router-dom";
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import MainPage from "./page/MainPage";
+import AccountPage from "./page/AccountPage";
+import LoadingPage from "./page/LoadingPage";
 
 function App() {
+
+    useEffect(() => {
+      document.body.classList.add('body');
+    })
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Routes>
+        <Route path="/" element={<AccountPage/>} />
+        <Route path="/loading" element={<LoadingPage/>} />
+        <Route path="/main" element={<MainPage/>} />
+      </Routes>
+      
     </div>
-  );
+  )
 }
 
 export default App;

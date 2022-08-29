@@ -1,0 +1,148 @@
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* 시작 */
+
+body {
+    background: #141414;
+    color: white;
+    font-family: "Poppins", sans-serif;
+}
+
+nav {
+    /* border: 3px solid red; */
+    position: absolute;
+    top: 0;
+    padding-left: 1rem;
+    margin-top: 1.4rem;
+    background: black;
+}
+
+.navbar-logo {
+    width: 6rem;
+    height: 100%;
+    margin-left: 2.5rem;
+    cursor: pointer;
+}
+
+.accounts_manage {
+    /* border: 3px solid red; */
+    padding-top: 12%;
+    /* position: absolute;
+    /* justify-content: center; */
+    margin: auto;
+    width: 80%;
+}
+
+.accounts_title {
+    /* border: 3px solid red; */
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+.accounts {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    /* border: 3px solid red; */
+}
+
+.accounts button {
+    /* flex-grow: 1;
+    flex-basis: 0; */
+    cursor: pointer;
+    text-decoration: none;
+    background-color: black;
+    border: 1px solid transparent;
+}
+
+.accounts button:not(:last-child){
+    margin-right: 1.5vh;
+}
+
+.accounts button:hover .user_img {
+   border-color: white;
+}
+
+.accounts button:hover .user_name {
+    color: white;
+}
+
+.user_img {
+    width: 8.8rem;
+    margin-bottom: 0.6rem;
+    border-radius: 7px;
+    border: 3px solid transparent;
+}
+
+.user_name {
+    text-align: center;
+    color: gray;
+    font-size: 1.2rem;
+}
+
+.user_manage {
+    display: flex;
+    justify-content: center;
+    padding-top: 1.25rem;
+}
+
+.user_manage button {
+    background: transparent;
+    border: 1px solid gray;
+    color: gray;
+    display: block;
+    font-size: 2.5vh;
+    padding: 0.8rem 0;
+    width: 12%;
+}
+
+.user_manage button:hover {
+    color: white;
+    border: 2px solid white;
+}
