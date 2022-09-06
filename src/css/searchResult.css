@@ -1,0 +1,40 @@
+.search-result {
+    position: absolute;
+    top: 21%;
+    padding-left: 3.35rem;
+    display: flex;
+}
+
+.search-result h1 {
+    color: gray;
+    font-size: 1.05rem;
+    padding-right: 1rem;
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+.search-result-container {
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 32%;
+}
+
+.search-result-slider {
+    /* border: 1px solid white; */
+    display: flex;
+    padding-bottom: 4rem;
+    justify-content: center;
+}
+
+.search-result-slider img {
+    /* border: 1px solid white; */
+    width: 18%;
+    margin-right: 0.3rem;
+    border-radius: 1%;
+}
+
+.search-result-slider img:hover {
+    transform: scale(1.3);
+}

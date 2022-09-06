@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import MainPage from "./page/MainPage";
 import AccountPage from "./page/AccountPage";
 import LoadingPage from "./page/LoadingPage";
+import SearchResultPage from "./page/SearchResultPage";
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
         <Route path="/" element={<AccountPage/>} />
         <Route path="/loading" element={<LoadingPage/>} />
         <Route path="/main" element={<MainPage/>} />
+        <Route path="/search" element={<SearchResultPage/>} />
       </Routes>
       
     </div>

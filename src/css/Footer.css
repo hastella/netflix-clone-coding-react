@@ -1,0 +1,65 @@
+footer {
+    padding: 0 10rem 0 10rem;
+    /* border: 3px solid red; */
+    /* position: fixed; */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: gray;
+    position: relative;
+    padding-top: 5rem;
+}
+
+footer .col-4 {
+    margin-left: 1.5rem;
+}
+
+.btn-outline-light {
+    --bs-btn-border-color: none;
+    padding-right: 0.5rem;
+}
+
+.btn-outline-light:hover {
+    background: none;
+    color: white;
+}
+
+.col {
+    margin-left: 0.8rem;
+    margin-top: 1rem;
+    font-size: 0.85rem;
+}
+
+.col:hover {
+    text-decoration:underline;
+}
+
+.footer_info {
+    margin-top: 2rem;
+    margin-left: 1rem;
+    margin-bottom: 10px;
+}
+
+.footer_info button {
+    background-color: rgb(20,20,20);
+    border-radius: 0;
+    border: 1px solid gray;
+    color: gray;
+    padding: 0.45rem 0.5rem 0.45rem 0.5rem;
+    font-size: 0.8rem;
+}
+
+.footer_info button:hover{
+    color:white;
+    background: none;
+    border: 2px solid gray;
+}
+
+.info {
+    margin-top: 1.5rem;
+    font-size: 0.8rem;
+}
+
+.info p {
+    padding-bottom: 0.4rem;
+}

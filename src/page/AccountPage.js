@@ -9,6 +9,8 @@ const AccountPage = () => {
         navigate("/loading");
     }
 
+    // const [search, setSearch] = useRecoilState(searchState);
+
   return (
     <div>
         {/* <Link to ="/loading">go to loading page</Link> */}
