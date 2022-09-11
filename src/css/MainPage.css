@@ -121,6 +121,10 @@ table {
     color: white;
   }
 
+  .form-control-hidden {
+    display: none;
+  }
+
   .form-control:focus {
     background-color: rgba(0, 0, 0, 0.807);
     border-color: white;

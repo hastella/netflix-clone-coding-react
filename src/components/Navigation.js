@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{ useState, useRef } from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -30,7 +30,6 @@ const Navigation = () => {
   const [isActive, setIsActive] = useState(false);
 
   const onChangeInput = (e) => {
-
     setSearch(e.target.value);
     if(e.target.value.match(/[^a-zA-Z0-9ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/)){
       setIsActive(true)
@@ -40,32 +39,24 @@ const Navigation = () => {
     }
   }
 
+  // set visibility of input field when click search button
+  // const [isVisible, setVisibility] = useState(false);
+  const searchInput = useRef();
+
+  const toggleInput = (e) => {
+    // setVisibility(e.target.value);
+    if (searchInput.style.display === "block") {
+      searchInput.style.display = "none";
+  } else {
+      searchInput.style.display = "block";
+  }
+  }
+
   // navigate to search result when click search button
   const navigate = useNavigate()
   const goToSearchResult = () => {
-    navigate("/search")
+    navigate('/search')
   }
-
-  // toggle search input when click
-  // const[visible, setVisible] = useState(true);
-  // const[width, setWidth] = useState(window.innerHeight);
-
-  // const toggleVisibility = () => {
-  //   setVisible(prev => !prev);
-  // };
-
-  // const toggleWidth = () => {
-  //   setWidth(window.innerWidth);
-  // };
-
-  // useEffect(() => {
-  //   console.log(visible);
-  //   window.addEventListener("resize", toggleWidth);
-  //   width <= 600 ? setVisible(false) : setVisible(true);
-  //   return () => {
-  //     window.removeEventListener("resize", toggleWidth);
-  //   };
-  // }, [width]);
 
   return (
       <Navbar className={ color ? 'nav-colored' : 'nav'} fixed="top" expand="lg">
@@ -82,15 +73,19 @@ const Navigation = () => {
               <Nav.Link className="nav-link" href="#link">NEW! 요즘 대세 콘텐츠</Nav.Link>
               <Nav.Link className="nav-link" href="#link">내가 찜한 콘텐츠</Nav.Link>
               <Nav.Link className="nav-link" href="#link">언어별로 찾아보기</Nav.Link>
+              <Nav.Link className="nav-link" href="/main_weather">오늘 날씨에는 이런 콘텐츠!</Nav.Link>
             </Nav>
             <Form className="d-flex" value={search} onChange={onChangeInput}>
               <Form.Control
-                className="me-2 searchBar form-control"
+                className = "me-2 searchBar form-control"
                 value={search}
                 type="text"
-                placeholder="제목, 사람, 장르">
+              placeholder="제목, 사람, 장르"
+                ref={searchInput}>
               </Form.Control>
-              <SearchButton className = "btn-outline-success searchBtn" onClick={goToSearchResult} active={isActive} disabled={isActive ? true : false} variant="outline-success">
+              <SearchButton className = "btn-outline-success searchBtn" 
+              onClick={toggleInput} 
+              active={isActive} disabled={isActive ? true : false} variant="outline-success">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="search-icon"><path fill-rule="evenodd" clip-rule="evenodd" d="M13 11C13 13.7614 10.7614 16 8 16C5.23858 16 3 13.7614 3 11C3 8.23858 5.23858 6 8 6C10.7614 6 13 8.23858 13 11ZM14.0425 16.2431C12.5758 17.932 10.4126 19 8 19C3.58172 19 0 15.4183 0 11C0 6.58172 3.58172 3 8 3C12.4183 3 16 6.58172 16 11C16 11.9287 15.8417 12.8205 15.5507 13.6497L24.2533 18.7028L22.7468 21.2972L14.0425 16.2431Z" fill="currentColor"></path></svg>
               </SearchButton>
             </Form>
@@ -122,7 +117,7 @@ const Navigation = () => {
   )
  };
 
- const SearchButton = styled.button`
+const SearchButton = styled.button`
   color: ${props => props.active?'red':'white'};
 `;
 

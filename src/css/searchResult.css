@@ -21,6 +21,12 @@
     top: 32%;
 }
 
+.search-result-container h1{
+    padding: 0 0 1.5rem 3.7rem;
+    font-size: larger;
+    font-weight:bolder;
+}
+
 .search-result-slider {
     /* border: 1px solid white; */
     display: flex;
